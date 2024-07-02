@@ -44,6 +44,10 @@ The Startup Viability Calculator uses the following metrics:
 
 The calculator combines these metrics to produce a final score. A score of 1 or higher suggests viability for an indie startup, while a score of 2 or higher indicates potential for a scale-up.
 
+## Acknowledgments
+
+This project was kickstarted with the help of [claude-artifacts-react](https://github.com/risonsimon/claude-artifacts-react) and [Claude.ai](https://claude.ai/).
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
