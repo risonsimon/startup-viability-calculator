@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -15,7 +16,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Info } from "lucide-react";
+import { Info, Github } from "lucide-react";
 
 const criteriaOptions = {
   potentialCustomers: [
@@ -156,8 +157,22 @@ const StartupViabilityCalculator = ({ customLabels = {} }) => {
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
-      <CardHeader>
-        <h2 className="text-2xl font-bold">Startup Viability Calculator</h2>
+      <CardHeader className="flex flex-col items-start">
+        <h2 className="text-2xl font-bold mb-4">
+          Startup Viability Calculator
+        </h2>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() =>
+            window.open(
+              "https://github.com/risonsimon/startup-viability-calculator",
+              "_blank"
+            )
+          }
+        >
+          <Github className="mr-2 h-4 w-4" /> View on GitHub
+        </Button>
       </CardHeader>
       <CardContent>
         <TooltipProvider>
@@ -214,7 +229,7 @@ const StartupViabilityCalculator = ({ customLabels = {} }) => {
             className="w-2/3 font-bold text-lg"
           />
         </div>
-        <p className="mt-4 text-sm text-gray-600">
+        <p className="mt-4 text-sm text-gray-600 text-left">
           Score interpretation:
           <br />1 or higher: Viable for an indie startup
           <br />2 or higher: Potential for a scale-up
